@@ -41,7 +41,7 @@ int main()
            o[i]=o[j];
            o[j]=temp;
         }
+        cout<<o;
     }
-    cout<<o;
     return 0;
 }
