@@ -1,18 +1,17 @@
 str="aaabbcc"
-output=""
-c=0
+output=Array.new
 str.each_char{|char|
-c=str.count(char)
-if(c%2!=0)
-# 	str.gsub!(char,"")
-# else
-	output<<char
-	str.delete!(char)
+if (output==[])
+output.push(char)
+elsif (output.last==char)
+output.pop()
+else
+output.push(char)
 end
 }
-
-if output.empty?
+res=output.join()
+if res.empty?
 	print "empty string, #{str} has all even characters"
 else
-	print output
+	print res
 end
